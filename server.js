@@ -15,12 +15,13 @@ app.post('/usuarios', (req, res) => {
     //console.log(req.body);
     users.push(req.body);
     res.send('ok post');
-
+    res.status(201).json(users);
 })
 
 app.get('/usuarios', (req, res) => {
-     res.send(users);
+     res.status(200).json(users);
 });
 
 app.listen(3000);
     
+
